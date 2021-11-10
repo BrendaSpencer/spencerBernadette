@@ -1,0 +1,317 @@
+
+/* === algemeen over alle pagina's === */
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+body{
+  font-size: 1em;
+  font-family: cursive;
+  color: black;
+  background-color: mistyrose;
+  
+}
+main{
+  border-top: 2px lightgray solid ;
+  width: 70%;
+  margin:2em auto;
+  padding: 0;
+  background-color: mistyrose;
+  text-align: left;
+  }
+/* --- navigatie --- */
+li a{
+  text-decoration: none;
+  color:black;
+}
+nav ul li{
+  font-size: 1.8em;
+  display: inline;
+  padding: 0.8em;
+}
+.active{
+ color: rgb(164, 167, 167);
+}
+li a:hover{
+  border-bottom: 3px solid rgb(164, 167, 167);
+}
+
+nav ul{
+  
+  text-align: right;
+  margin: 3em;
+  font-family: 'Dancing Script',  cursive;
+  
+}
+/* --- hoofding --- */
+header{
+  background-color: white;
+  border-radius: 15px;
+  margin:0 auto;
+  padding: 2%;
+  max-width: 60%;
+ 
+}
+
+header::after { 
+  content: "";
+  display: block; 
+  clear: both;
+}
+.logo{
+  float: left;
+  border-radius:5%;
+  min-width: 10px;
+  max-width:300px;
+  margin-right: 15px;
+  
+}
+h1{
+  margin:1em auto 0;
+  color: rgb(164, 167, 167);
+  font-family: 'Dancing Script', cursive;
+  font-size:4em;
+  text-align: center;
+}
+header > p{
+  text-align: center;
+  
+}
+  /* --- footer --- */
+  footer{
+    border-top: 2px lightgray solid;
+    font-size: 0.8em;
+    padding: 1em;
+    text-align: center;
+  }
+
+  /* ===  css regels per pagina  ===  */
+
+/* --- homepage --- */
+.intro{
+  display: flex;
+  margin: 12px auto;
+  padding-bottom: 3em;
+  flex-direction: row;
+  border-bottom: 2px lightgray solid;
+  gap: 1.4em;
+  width: 100%;
+}
+.intro>*{
+  flex:1;
+  height: 100%;
+}
+.contact{
+  font-size: 2em;
+ text-align: center;
+ }
+
+ .contact a{
+   color: gray;
+   margin: 1em;
+ }
+#oli{
+  max-width: 12%;
+  box-shadow: gray 5px 5px 5px;
+
+
+}
+#tips{
+  text-align: center;
+}
+h4{
+  margin-top: 3%;
+  text-align: center;
+  color: gray;
+  font-size:x-large;
+  font-family: 'Dancing Script', cursive;
+}
+
+/* --- diy, kids_fashion & recepten --- */
+
+.content{
+  background-color: mistyrose;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*artikels*/
+
+h2{
+  text-align: center;
+  color:gray;
+  font-family: 'Dancing Script', cursive;
+  width: 100%;
+  border-bottom: mistyrose 2px solid;
+  margin-bottom: 1em ;
+ 
+}
+
+.flex:not(:last-child){ 
+  border-bottom:15px solid mistyrose;
+}
+
+.flex{
+  background-color: white;
+  margin: 0 auto;
+  padding: 1em 0;
+  width: 100%;
+}
+article{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+}
+article>*{
+ 
+margin: auto;
+}
+article>p,
+article>ul{
+  flex-grow: 3;
+  max-width: 50ch;
+ 
+}
+article>img{
+  flex-grow: 1;
+  max-width: 22%;
+  box-shadow: gray 5px 5px 5px;
+}
+
+
+
+/* === recepten === */
+article ul{
+  list-style-type:none;
+  text-align: center;
+
+  padding: 0.2em;
+}
+
+/*images artikels*/
+
+
+.bs,
+.sauce,
+.grenadine{
+  border-radius: 5px;
+  margin: 1em;
+  }
+ 
+  .grid{
+    display:grid;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 15px;
+  
+  }
+  .galerij,
+  .uitleg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: gray 5px 5px 5px;
+  
+  }
+#first{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+#second{
+  grid-column-start: 3;
+  grid-column-end:5 ;
+  grid-row-start:1;
+  grid-row-end: 3;
+}
+#fifth{
+  grid-column-start: 7;
+  grid-column-end:9 ;
+  grid-row-start:1;
+  grid-row-end: 4;
+}
+#champ{
+  grid-column-start: 5;
+  grid-column-end:7 ;
+  grid-row-start:2;
+  grid-row-end: 4;
+}
+#spider{
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start:3;
+  grid-row-end: 5;
+}
+#self{
+  grid-row-start: 4;
+  grid-row-end: 6;
+ 
+}
+#dreams{
+  grid-row-start: -6;
+  grid-row-end: -4;
+  grid-column-start: 8;
+  grid-column-end: 9;
+ 
+}
+ 
+
+
+
+
+
+
+
+
+
+
+@media  screen and (max-width: 900px) {
+  body,
+  header,
+  main,
+  .content{
+   width: 90%;
+   text-align: center;
+   margin: auto;
+  }
+  .intro,
+  article{
+    flex-direction: column;
+    
+  }
+  article>*{
+    max-width: 100%;
+  }
+  header>h1{
+    font-size: 2em;
+  }
+  main{
+    font-size: 0.7em;
+  }
+  .logo{
+    margin: auto;
+    max-width: 100%;
+  }
+  nav ul{
+    font-size: 0.5em;
+    text-align: right;
+   }
+   nav ul li {
+    margin: 0.1em;
+    padding: 0.1em;
+  }
+  #oli{
+    max-width: 100%;
+  }
+  .grid{
+    display: block;
+  }
+}
